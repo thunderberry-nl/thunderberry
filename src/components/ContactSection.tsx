@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, GitHub, Linkedin, Send, ArrowRight } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -63,7 +63,7 @@ export default function ContactSection() {
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-developer-blue text-white rounded-full flex items-center justify-center">
-                  <GitHub size={20} />
+                  <Github size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-developer-darkBlue">GitHub</h3>
