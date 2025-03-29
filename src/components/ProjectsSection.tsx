@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Star, GitFork, Eye } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -41,7 +40,7 @@ export default function ProjectsSection() {
         setError('Failed to load projects. Using fallback data.');
         setLoading(false);
         
-        // Fallback data
+        // Fallback data with added console-captor
         setProjects([
           {
             name: "sslcontext-kickstart",
@@ -52,6 +51,16 @@ export default function ProjectsSection() {
             watchers_count: 580,
             language: "Java",
             topics: ["security", "tls", "ssl", "java", "certificate"]
+          },
+          {
+            name: "console-captor",
+            description: "A Java library to capture console output for testing and logging purposes",
+            html_url: "https://github.com/Hakky54/console-captor",
+            stargazers_count: 35,
+            forks_count: 10,
+            watchers_count: 35,
+            language: "Java",
+            topics: ["testing", "logging", "java", "console"]
           },
           {
             name: "mutual-tls-ssl",
@@ -82,16 +91,6 @@ export default function ProjectsSection() {
             watchers_count: 45,
             language: "Java",
             topics: ["logging", "testing", "unit-tests", "slf4j"]
-          },
-          {
-            name: "certificate-ripper",
-            description: "A library to extract SSL certificates from remote servers",
-            html_url: "https://github.com/Hakky54/certificate-ripper",
-            stargazers_count: 35,
-            forks_count: 2,
-            watchers_count: 35,
-            language: "Java",
-            topics: ["security", "certificates", "ssl", "tls", "x509"]
           }
         ]);
       }

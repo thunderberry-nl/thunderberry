@@ -55,8 +55,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-developer-darkBlue">Email</h3>
-                  <a href="mailto:contact@example.com" className="text-developer-gray/80 hover:text-developer-blue transition-colors">
-                    contact@example.com
+                  <a href="mailto:hakan.altindag@thunderberry.nl" className="text-developer-gray/80 hover:text-developer-blue transition-colors">
+                    hakan.altindag@thunderberry.nl
                   </a>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-developer-darkBlue">LinkedIn</h3>
                   <a 
-                    href="https://linkedin.com/in/" 
+                    href="https://www.linkedin.com/in/altindag-hakan/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-developer-gray/80 hover:text-developer-blue transition-colors flex items-center"
@@ -174,3 +174,4 @@ export default function ContactSection() {
     </section>
   );
 }
+
