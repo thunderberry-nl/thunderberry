@@ -1,69 +1,88 @@
 
 import React, { useState, useEffect } from 'react';
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function PartnershipsSection() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
   
   const partners = [
     { 
       name: 'ABN AMRO', 
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQFh4-4Hzfb-zA/company-logo_200_200/0/1662541957683/abn_amro_logo?e=1719878400&v=beta&t=6QMHVBPl2X6BejQaOp9QsqS_JGTmS1-mqVLuDZZrpWc',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/ABN_AMRO_Logo.svg/1200px-ABN_AMRO_Logo.svg.png',
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
     { 
       name: 'ING', 
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQECph7raSVAdA/company-logo_200_200/0/1677226590342/ing_logo?e=1719878400&v=beta&t=pjq_OmOJTIEF-lIEXFMQGTZgHgAVrmK4A7jrzacFOQ4',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/ING_Group_N.V._Logo.svg/2560px-ING_Group_N.V._Logo.svg.png',
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
     { 
       name: 'Nederlandse Spoorwegen', 
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQGGIJdIKE7DPQ/company-logo_200_200/0/1639045493891/ns_logo?e=1719878400&v=beta&t=Zzfyp9wVvCbkQdSVp1UrCn5v3JGZm5uT2M5d3xMMVZA', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/NS_logo.svg/2560px-NS_logo.svg.png', 
       backgroundColor: '#fff',
-      padding: '8px' 
+      padding: '12px' 
     },
     { 
       name: 'KLM Royal Dutch Airlines', 
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQGcXDmGEAZrkg/company-logo_200_200/0/1678962121499/klm_royal_dutch_airlines_logo?e=1719878400&v=beta&t=5Wvk4LDVJFjtYOUx_1N6V-v-aIJjEKB4FS83lkEA1n8', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/KLM_logo.svg/2560px-KLM_logo.svg.png', 
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
     { 
       name: 'Kamer van Koophandel', 
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQHFXwVz4_7gOg/company-logo_200_200/0/1677573292387/kvk_logo?e=1719878400&v=beta&t=NQM-8hBdgTfdRu7iAr8Uy1Rj8_2-4_tGKDuxI-6Kc-g', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/KvK_logo.svg/1200px-KvK_logo.svg.png', 
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
     { 
       name: 'IVO Rechtspraak', 
-      logo: 'https://media.licdn.com/dms/image/C4E0BAQFGp1tD7b-Txw/company-logo_200_200/0/1677183024207/de_rechtspraak_logo?e=1719878400&v=beta&t=oAxdlZdHbZcxhLFBDRmcdKq4Gq-Vq3qrR0o4U-xJj7Q', 
+      logo: 'https://www.rechtspraak.nl/SiteCollectionImages/Logo-de-Rechtspraak.png', 
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
     { 
       name: 'Attraqt', 
-      logo: 'https://media.licdn.com/dms/image/C4E0BAQGBnRB2yLEL-g/company-logo_200_200/0/1645179097583/attraqt_logo?e=1719878400&v=beta&t=uQYIMvUdRg0H5-CzlBbN9V1lnNnVXwTAL0rWl7L2Czk', 
+      logo: 'https://www.attraqt.com/wp-content/uploads/2022/08/logo.svg', 
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
     { 
       name: 'IKEA', 
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226/ikea_logo?e=1719878400&v=beta&t=rL-DCqnpvMBHllzwjZftB6xaLXi1p-i51XYXFSvFNmA', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/2560px-Ikea_logo.svg.png', 
       backgroundColor: '#fff',
-      padding: '8px'
+      padding: '12px'
     },
   ];
 
-  // Track when images have loaded
+  // Track when all images have loaded
   useEffect(() => {
-    // Lazy loading check
-    const checkImagesLoaded = setTimeout(() => {
+    if (loadedCount >= partners.length) {
       setImagesLoaded(true);
-    }, 1000);
+    }
+  }, [loadedCount]);
+
+  // Set a fallback if images don't load in reasonable time
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!imagesLoaded) {
+        setImagesLoaded(true);
+      }
+    }, 3000);
     
-    return () => clearTimeout(checkImagesLoaded);
-  }, []);
+    return () => clearTimeout(timeout);
+  }, [imagesLoaded]);
+
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1);
+  };
+
+  const handleImageError = (partnerName: string) => {
+    console.error(`Failed to load image for ${partnerName}`);
+    setLoadedCount(prev => prev + 1);
+  };
 
   return (
     <section id="partnerships" className="py-16 bg-white">
@@ -83,29 +102,26 @@ export default function PartnershipsSection() {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div 
-                className="w-24 h-24 rounded-lg flex items-center justify-center mb-3 bg-white shadow-sm border border-gray-100 overflow-hidden"
+                className="h-24 w-40 rounded-lg flex items-center justify-center mb-3 bg-white shadow-sm border border-gray-100 overflow-hidden"
                 style={{ 
                   backgroundColor: partner.backgroundColor,
                   padding: partner.padding
                 }}
               >
-                {imagesLoaded ? (
+                {!imagesLoaded ? (
+                  <Skeleton className="h-16 w-32" />
+                ) : (
                   <img 
                     src={partner.logo} 
                     alt={`${partner.name} logo`} 
-                    className="max-w-full max-h-full object-contain"
+                    className="max-h-full max-w-full object-contain"
                     loading="lazy"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      console.error(`Failed to load image for ${partner.name}`);
-                      target.src = `https://via.placeholder.com/100x100?text=${encodeURIComponent(partner.name)}`;
-                    }}
+                    onLoad={handleImageLoad}
+                    onError={() => handleImageError(partner.name)}
                   />
-                ) : (
-                  <div className="animate-pulse bg-gray-200 w-16 h-16 rounded"></div>
                 )}
               </div>
-              <span className="text-developer-darkBlue font-medium text-center">{partner.name}</span>
+              <span className="text-developer-darkBlue font-medium text-center mt-2">{partner.name}</span>
             </div>
           ))}
         </div>
