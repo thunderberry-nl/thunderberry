@@ -20,7 +20,7 @@ export default function PartnershipsSection() {
     },
     { 
       name: 'Nederlandse Spoorwegen', 
-      logo: 'https://en.m.wikipedia.org/wiki/File:Nederlandse_spoorwegen_logo.svg#/media/File%3ALogo_NS.svg', 
+      logo: 'https://customizedwear.nl/wp-content/uploads/2017/12/nederlandse-spoorwegen-ns-logo.png', 
       backgroundColor: '#fff',
       padding: '12px' 
     },
@@ -56,14 +56,12 @@ export default function PartnershipsSection() {
     },
   ];
 
-  // Track when all images have loaded
   useEffect(() => {
     if (loadedCount >= partners.length) {
       setImagesLoaded(true);
     }
   }, [loadedCount]);
 
-  // Set a fallback if images don't load in reasonable time
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (!imagesLoaded) {
