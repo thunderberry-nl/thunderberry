@@ -55,12 +55,12 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <a 
-        href="#about" 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-developer-blue animate-bounce"
-        aria-label="Scroll down"
+      <a
+          href="#about"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-developer-blue animate-bounce"
+          aria-label="Scroll down"
       >
-        <ArrowDown size={32} />
+        <ArrowDown size={32}/>
       </a>
     </section>
   );
