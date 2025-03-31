@@ -9,49 +9,61 @@ export default function PartnershipsSection() {
   const partners = [
     { 
       name: 'ABN AMRO', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/ABN-AMRO_Logo_new_colors.svg',
+      logo: 'abn-amro.svg',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'ING', 
-      logo: 'https://d21buns5ku92am.cloudfront.net/69197/images/357649-ING_Logo_FC_A1_digitalprinting-57d57a-large-1593084012.jpg',
+      logo: 'ing.svg',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'Nederlandse Spoorwegen', 
-      logo: 'https://customizedwear.nl/wp-content/uploads/2017/12/nederlandse-spoorwegen-ns-logo.png', 
+      logo: 'ns.png',
       backgroundColor: '#fff',
       padding: '12px' 
     },
     { 
       name: 'KLM Royal Dutch Airlines', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/KLM_logo.svg/2560px-KLM_logo.svg.png', 
+      logo: 'klm.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'Kamer van Koophandel', 
-      logo: 'https://logovtor.com/wp-content/uploads/2020/01/kamer-van-koophandel-kvk-logo-vector.png', 
+      logo: 'kvk.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'IVO Rechtspraak', 
-      logo: 'https://www.nvvk.nl/l/library/download/urn:uuid:73fa5016-f3e5-41f0-98ef-b614641cdef5/rechtspraak.png?scaleType=6&width=435&height=290', 
+      logo: 'rechtspraak.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'Attraqt', 
-      logo: 'https://rethink.industries/wp-content/uploads/2022/09/Attraqt_Logo_Black_RGB-400x170.png', 
+      logo: 'attraqt.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'IKEA', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/2560px-Ikea_logo.svg.png', 
+      logo: 'ikea.png',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
+      name: 'Luminis',
+      logo: 'luminis.jpeg',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
+      name: 'Capgemini',
+      logo: 'capgemini.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
@@ -109,7 +121,7 @@ export default function PartnershipsSection() {
                   <Skeleton className="h-16 w-32" />
                 ) : (
                   <img 
-                    src={partner.logo} 
+                    src={"src/components/logo/" + partner.logo}
                     alt={`${partner.name} logo`} 
                     className="max-h-full max-w-full object-contain"
                     loading="lazy"
