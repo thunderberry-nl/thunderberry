@@ -9,19 +9,19 @@ export default function PartnershipsSection() {
   const partners = [
     { 
       name: 'ABN AMRO', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/ABN_AMRO_Logo.svg/1200px-ABN_AMRO_Logo.svg.png',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ABN-AMRO_Logo_new_colors.svg/1200px-ABN-AMRO_Logo_new_colors.svg.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'ING', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/ING_Group_N.V._Logo.svg/2560px-ING_Group_N.V._Logo.svg.png',
+      logo: 'https://nieuws.ing.nl/l/library/download/urn:uuid:87ad0f5f-570a-497b-8d14-e4f0267f161d/ing+lion.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'Nederlandse Spoorwegen', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/NS_logo.svg/2560px-NS_logo.svg.png', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nederlandse_spoorwegen_logo.svg/1200px-Nederlandse_spoorwegen_logo.svg.png', 
       backgroundColor: '#fff',
       padding: '12px' 
     },
@@ -33,19 +33,19 @@ export default function PartnershipsSection() {
     },
     { 
       name: 'Kamer van Koophandel', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/KvK_logo.svg/1200px-KvK_logo.svg.png', 
+      logo: 'https://logovtor.com/wp-content/uploads/2020/04/kamer-van-koophandel-kvk-logo-vector.png', 
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'IVO Rechtspraak', 
-      logo: 'https://www.rechtspraak.nl/SiteCollectionImages/Logo-de-Rechtspraak.png', 
+      logo: 'https://www.nvvk.nl/l/library/download/urn:uuid:73fa5016-f3e5-41f0-98ef-b614641cdef5/rechtspraak.png?scaleType=6&width=435&height=290', 
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'Attraqt', 
-      logo: 'https://www.attraqt.com/wp-content/uploads/2022/08/logo.svg', 
+      logo: 'https://rethink.industries/wp-content/uploads/2022/09/Attraqt_Logo_Black_RGB-400x170.png', 
       backgroundColor: '#fff',
       padding: '12px'
     },

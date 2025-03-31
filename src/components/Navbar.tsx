@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="text-xl font-bold text-developer-darkBlue">
-          Hakky54
+          thunderberry
         </a>
 
         {/* Desktop navigation */}
@@ -61,7 +61,7 @@ export default function Navbar() {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/" 
+              href="https://linkedin.com/in/altindag-hakan/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-developer-gray hover:text-developer-blue transition-colors"
@@ -70,7 +70,7 @@ export default function Navbar() {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:contact@example.com" 
+              href="mailto:hakan.altindag@thunderberry.nl" 
               className="text-developer-gray hover:text-developer-blue transition-colors"
               aria-label="Email"
             >
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/" 
+                href="https://linkedin.com/in/altindag-hakan/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-developer-gray hover:text-developer-blue transition-colors"
@@ -127,7 +127,7 @@ export default function Navbar() {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:contact@example.com" 
+                href="mailto:hakan.altindag@thunderberry.nl" 
                 className="text-developer-gray hover:text-developer-blue transition-colors"
                 aria-label="Email"
               >

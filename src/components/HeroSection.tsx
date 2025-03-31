@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between">
         <div className="lg:w-1/2 animate-fade-up">
           <span className="inline-block bg-developer-lightBlue text-developer-darkBlue px-4 py-1 rounded-full text-sm font-semibold mb-4">
-            Java Software Developer
+            Software Developer
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-developer-gray mb-4 leading-tight">
             Hi, I'm <span className="text-developer-blue">Hakan Altindag</span>

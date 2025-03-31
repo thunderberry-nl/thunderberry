@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Star, GitFork, Eye } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,10 +30,18 @@ export default function ProjectsSection() {
         }
         const data: Repository[] = await response.json();
         
-        // Sort by stars and get top 5
-        const topProjects = data
-          .sort((a, b) => b.stargazers_count - a.stargazers_count)
-          .slice(0, 5);
+        // Filter to ensure console-captor is included
+        const consoleCaptorProject = data.find(repo => repo.name === 'console-captor');
+        
+        // Sort by stars but ensure console-captor is included
+        const starsSorted = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+        
+        let topProjects = starsSorted.slice(0, 5);
+        
+        // If console-captor is not in top 5, add it and remove the 5th entry
+        if (consoleCaptorProject && !topProjects.some(p => p.name === 'console-captor')) {
+          topProjects = [...topProjects.slice(0, 4), consoleCaptorProject];
+        }
         
         setProjects(topProjects);
         setLoading(false);
@@ -40,7 +49,7 @@ export default function ProjectsSection() {
         setError('Failed to load projects. Using fallback data.');
         setLoading(false);
         
-        // Fallback data with added console-captor
+        // Fallback data with added console-captor if not already present
         setProjects([
           {
             name: "sslcontext-kickstart",
