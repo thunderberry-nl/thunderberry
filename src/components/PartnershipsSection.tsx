@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -87,8 +88,7 @@ export default function PartnershipsSection() {
         <h2 className="section-title">Partnerships</h2>
         
         <p className="text-center text-lg text-developer-gray/90 mb-12 max-w-3xl mx-auto">
-          I've had the privilege of collaborating with these distinguished organizations, 
-          delivering innovative Java solutions that drive business success.
+          I've had the privilege of collaborating with these distinguished organizations, delivering innovative Java and Elasticsearch solutions that drive business success.
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -126,3 +126,4 @@ export default function PartnershipsSection() {
     </section>
   );
 }
+
