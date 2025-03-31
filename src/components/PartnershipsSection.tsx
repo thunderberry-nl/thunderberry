@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -9,19 +8,19 @@ export default function PartnershipsSection() {
   const partners = [
     { 
       name: 'ABN AMRO', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ABN-AMRO_Logo_new_colors.svg/1200px-ABN-AMRO_Logo_new_colors.svg.png',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/ABN-AMRO_Logo_new_colors.svg',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'ING', 
-      logo: 'https://nieuws.ing.nl/l/library/download/urn:uuid:87ad0f5f-570a-497b-8d14-e4f0267f161d/ing+lion.png',
+      logo: 'https://d21buns5ku92am.cloudfront.net/69197/images/357649-ING_Logo_FC_A1_digitalprinting-57d57a-large-1593084012.jpg',
       backgroundColor: '#fff',
       padding: '12px'
     },
     { 
       name: 'Nederlandse Spoorwegen', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nederlandse_spoorwegen_logo.svg/1200px-Nederlandse_spoorwegen_logo.svg.png', 
+      logo: 'https://en.m.wikipedia.org/wiki/File:Nederlandse_spoorwegen_logo.svg#/media/File%3ALogo_NS.svg', 
       backgroundColor: '#fff',
       padding: '12px' 
     },
@@ -33,7 +32,7 @@ export default function PartnershipsSection() {
     },
     { 
       name: 'Kamer van Koophandel', 
-      logo: 'https://logovtor.com/wp-content/uploads/2020/04/kamer-van-koophandel-kvk-logo-vector.png', 
+      logo: 'https://logovtor.com/wp-content/uploads/2020/01/kamer-van-koophandel-kvk-logo-vector.png', 
       backgroundColor: '#fff',
       padding: '12px'
     },
