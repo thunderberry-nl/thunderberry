@@ -100,7 +100,7 @@ export default function SkillsOverviewSection() {
                   <Skeleton className="h-12 w-12 md:h-16 md:w-16" />
                 ) : (
                   <img 
-                    src={"src/components/logo/" + skill.logo}
+                    src={"/logo/" + skill.logo}
                     alt={`${skill.name} logo`} 
                     className="max-h-full max-w-full object-contain"
                     loading="lazy"

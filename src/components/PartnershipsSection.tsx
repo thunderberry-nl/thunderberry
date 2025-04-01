@@ -121,7 +121,7 @@ export default function PartnershipsSection() {
                   <Skeleton className="h-16 w-32" />
                 ) : (
                   <img 
-                    src={"src/components/logo/" + partner.logo}
+                    src={"/logo/" + partner.logo}
                     alt={`${partner.name} logo`} 
                     className="max-h-full max-w-full object-contain"
                     loading="lazy"
