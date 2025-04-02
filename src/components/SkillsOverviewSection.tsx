@@ -16,7 +16,7 @@ export default function SkillsOverviewSection() {
     { name: "Elastic Cloud", logo: "elastic-cloud.svg", backgroundColor: '#fff', padding: '12px' },
     { name: "Elasticsearch", logo: "elasticsearch.svg", backgroundColor: '#fff', padding: '12px' },
     { name: "Kibana", logo: "kibana.png", backgroundColor: '#fff', padding: '12px' },
-    { name: "Kubernetes", logo: "Kubernetes.png", backgroundColor: '#fff', padding: '12px' },
+    { name: "Kubernetes", logo: "kubernetes.png", backgroundColor: '#fff', padding: '12px' },
     { name: "Docker", logo: "docker.webp", backgroundColor: '#fff', padding: '12px' },
     { name: "Google Cloud Platform", logo: "gcp.png", backgroundColor: '#fff', padding: '12px' },
     { name: "Google Dataflow", logo: "dataflow.png", backgroundColor: '#fff', padding: '12px' },
