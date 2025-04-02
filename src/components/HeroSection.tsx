@@ -17,10 +17,10 @@ export default function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex items-center relative bg-gradient-to-br from-developer-lightBlue/10 to-developer-lightGray pt-16">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="container mx-auto px-4 py-12 flex flex-col items-center justify-between">
+      <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-between">
         {/* Show avatar at the top on mobile devices */}
         {isMobile && (
-          <div className="mb-8 flex justify-center animate-fade-in">
+          <div className="mb-4 flex justify-center animate-fade-in">
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-developer-blue to-developer-darkBlue rounded-full blur opacity-50"></div>
               <Avatar className="relative w-56 h-56 rounded-full border-4 border-developer-lightBlue shadow-xl bg-white">
