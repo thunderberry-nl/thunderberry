@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import Image from '@/components/ui/image';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -31,9 +31,18 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold text-developer-darkBlue">
-          thunderberry
-        </a>
+        <div className="flex items-center">
+          <Image 
+            src="/lovable-uploads/503f8ec0-0351-4e49-b210-cb86fc475cc3.png" 
+            alt="Thunderberry Logo" 
+            width={40} 
+            height={40} 
+            className="mr-3"
+          />
+          <a href="#home" className="text-xl font-bold text-developer-darkBlue">
+            thunderberry
+          </a>
+        </div>
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
