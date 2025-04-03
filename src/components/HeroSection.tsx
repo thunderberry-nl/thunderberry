@@ -47,23 +47,6 @@ export default function HeroSection() {
               A passionate Java developer specialized in building high-quality, secure, and efficient applications. 
               Creating open-source solutions that help developers worldwide.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                className="bg-developer-blue hover:bg-developer-darkBlue text-white cursor-pointer"
-                onClick={() => handleScroll('projects')}
-              >
-                View My Projects
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-developer-blue text-developer-blue hover:bg-developer-blue/10 cursor-pointer"
-                onClick={() => handleScroll('contact')}
-              >
-                Contact Me
-              </Button>
-            </div>
           </div>
           
           {/* Only show avatar on desktop */}
