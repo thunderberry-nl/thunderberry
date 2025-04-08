@@ -126,7 +126,7 @@ export default function OpenSourceSection() {
         
         <div className="mt-10 text-center">
           <a 
-            href="https://github.com/hakantaskin" 
+            href="https://github.com/hakky54"
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-developer-blue hover:text-developer-darkBlue transition-colors font-medium"
