@@ -9,7 +9,7 @@ type Contribution = {
   contributions: {
     url: string;
     prNumber: string;
-    title?: string; // Added title property
+    title?: string;
   }[];
   logo?: string;
 };
@@ -26,9 +26,15 @@ export default function OpenSourceSection() {
       ],
     },
     {
-      project: 'Exposed',
+      project: 'HTTP Libraries',
       contributions: [
         { url: 'https://github.com/JetBrains/Exposed/pull/1852', prNumber: '1852', title: 'Add support for multi-table joins' },
+        { url: 'https://github.com/eclipse-ee4j/jersey/pull/4573', prNumber: '4573', title: 'Fix JSON processing with large payload' },
+        { url: 'https://github.com/ktorio/ktor/pull/1852', prNumber: '1852', title: 'Add WebSocket support for Android clients' },
+        { url: 'https://github.com/com-lihaoyi/requests-scala/pull/62', prNumber: '62', title: 'Add support for custom headers' },
+        { url: 'https://github.com/Kong/unirest-java/pull/381', prNumber: '381', title: 'Add multipart form support' },
+        { url: 'https://github.com/Kong/unirest-java/pull/384', prNumber: '384', title: 'Fix connection pooling issue' },
+        { url: 'https://github.com/eclipse-vertx/vert.x/pull/3719', prNumber: '3719', title: 'Fixes NullPointerException in Http2ServerImpl' },
       ],
     },
     {
@@ -39,42 +45,11 @@ export default function OpenSourceSection() {
       ],
     },
     {
-      project: 'Jersey',
-      contributions: [
-        { url: 'https://github.com/eclipse-ee4j/jersey/pull/4573', prNumber: '4573', title: 'Fix JSON processing with large payload' },
-      ],
-    },
-    {
-      project: 'Ktor',
-      contributions: [
-        { url: 'https://github.com/ktorio/ktor/pull/1852', prNumber: '1852', title: 'Add WebSocket support for Android clients' },
-      ],
-    },
-    {
-      project: 'Requests-Scala',
-      contributions: [
-        { url: 'https://github.com/com-lihaoyi/requests-scala/pull/62', prNumber: '62', title: 'Add support for custom headers' },
-      ],
-    },
-    {
       project: 'Tomcat',
       logo: '/logo/tomcat.png',
       contributions: [
         { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Upgraded to JUnit Jupiter 5.9.0' },
         { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Changed from using StringBuilder to StringBuffer' },
-      ],
-    },
-    {
-      project: 'Unirest-Java',
-      contributions: [
-        { url: 'https://github.com/Kong/unirest-java/pull/381', prNumber: '381', title: 'Add multipart form support' },
-        { url: 'https://github.com/Kong/unirest-java/pull/384', prNumber: '384', title: 'Fix connection pooling issue' },
-      ],
-    },
-    {
-      project: 'Vert.x',
-      contributions: [
-        { url: 'https://github.com/eclipse-vertx/vert.x/pull/3719', prNumber: '3719', title: 'Fixes NullPointerException in Http2ServerImpl' },
       ],
     },
   ]);
