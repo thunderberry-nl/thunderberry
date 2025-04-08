@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { GitHub, Code, GitPullRequest } from 'lucide-react';
+import { Github, Code, GitPullRequest } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 type Contribution = {
@@ -114,7 +114,7 @@ export default function OpenSourceSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-developer-blue hover:text-developer-darkBlue transition-colors font-medium"
           >
-            <GitHub className="h-5 w-5" />
+            <Github className="h-5 w-5" />
             <span>View more on GitHub</span>
           </a>
         </div>
