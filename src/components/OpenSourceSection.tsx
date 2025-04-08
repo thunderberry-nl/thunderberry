@@ -21,24 +21,24 @@ export default function OpenSourceSection() {
       project: 'Elasticsearch',
       logo: '/logo/elasticsearch.svg',
       contributions: [
-        { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533', title: 'Enable support for decompression of compressed response within RestHighLevelClient', projectName: 'Elasticsearch' },
-        { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413', title: 'Enable decompression of response within LowLevelRestClient', projectName: 'Elasticsearch' },
-        { url: 'https://github.com/elastic/elasticsearch/pull/67802', prNumber: '67802', title: 'Added support for passing http query parameters', projectName: 'Elasticsearch' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533', title: 'Enable support for decompression of compressed response within RestHighLevelClient' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413', title: 'Enable decompression of response within LowLevelRestClient' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/67802', prNumber: '67802', title: 'Added support for passing http query parameters' },
       ],
     },
     {
       project: 'Tomcat',
       logo: '/logo/tomcat.png',
       contributions: [
-        { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Added option to use custom SSLContext', projectName: 'Tomcat' },
-        { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Simplify usage of custom ssl configuration', projectName: 'Tomcat' },
+        { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Added option to use custom SSLContext' },
+        { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Simplify usage of custom ssl configuration' },
       ],
     },
     {
       project: 'Http4k',
       contributions: [
-        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Bugfix: add nullsafety and fallback for description within the Status', projectName: 'Http4k' },
-        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Start ApacheAsyncClient by default if not started yet', projectName: 'Http4k' },
+        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Bugfix: add nullsafety and fallback for description within the Status' },
+        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Start ApacheAsyncClient by default if not started yet' },
       ],
     },
     {
@@ -97,7 +97,7 @@ export default function OpenSourceSection() {
                     {contribution.contributions.map((pr, prIndex) => (
                       <TableRow key={prIndex}>
                         <TableCell className="font-medium">#{pr.prNumber}</TableCell>
-                        <TableCell>{pr.projectName || contribution.project}</TableCell>
+                        <TableCell>{pr.projectName}</TableCell>
                         <TableCell>{pr.title || "Loading..."}</TableCell>
                         <TableCell>
                           <a 
