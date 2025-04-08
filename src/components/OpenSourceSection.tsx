@@ -6,6 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 
 type Contribution = {
   project: string;
+  showProjectNameInRows: boolean
   contributions: {
     url: string;
     prNumber: string;
@@ -20,6 +21,7 @@ export default function OpenSourceSection() {
     {
       project: 'Elasticsearch',
       logo: '/logo/elasticsearch.svg',
+      showProjectNameInRows: false,
       contributions: [
         { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533', title: 'Enable support for decompression of compressed response within RestHighLevelClient' },
         { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413', title: 'Enable decompression of response within LowLevelRestClient' },
@@ -29,6 +31,7 @@ export default function OpenSourceSection() {
     {
       project: 'Tomcat',
       logo: '/logo/tomcat.png',
+      showProjectNameInRows: false,
       contributions: [
         { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Added option to use custom SSLContext' },
         { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Simplify usage of custom ssl configuration' },
@@ -36,6 +39,7 @@ export default function OpenSourceSection() {
     },
     {
       project: 'Http4k',
+      showProjectNameInRows: false,
       contributions: [
         { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Bugfix: add nullsafety and fallback for description within the Status' },
         { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Start ApacheAsyncClient by default if not started yet' },
@@ -43,6 +47,7 @@ export default function OpenSourceSection() {
     },
     {
       project: 'HTTP Libraries',
+      showProjectNameInRows: true,
       contributions: [
         { url: 'https://github.com/Kong/unirest-java/pull/381', prNumber: '381', title: 'Support for custom ciphers and protocols for https requests', projectName: 'Unirest-Java' },
         { url: 'https://github.com/Kong/unirest-java/pull/384', prNumber: '384', title: 'Removed redundant access modifiers, fixed typos and simplified some assertions', projectName: 'Unirest-Java' },
@@ -88,7 +93,7 @@ export default function OpenSourceSection() {
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-[100px]">PR</TableHead>
-                      <TableHead className="w-[150px]">Project</TableHead>
+                      {contribution.showProjectNameInRows ? <TableHead className="w-[150px]">Project</TableHead>: null }
                       <TableHead>Title</TableHead>
                       <TableHead className="w-[120px]">Link</TableHead>
                     </TableRow>
@@ -97,7 +102,7 @@ export default function OpenSourceSection() {
                     {contribution.contributions.map((pr, prIndex) => (
                       <TableRow key={prIndex}>
                         <TableCell className="font-medium">#{pr.prNumber}</TableCell>
-                        <TableCell>{pr.projectName}</TableCell>
+                        {pr.projectName ? <TableCell>{pr.projectName}</TableCell>: null }
                         <TableCell>{pr.title || "Loading..."}</TableCell>
                         <TableCell>
                           <a 
