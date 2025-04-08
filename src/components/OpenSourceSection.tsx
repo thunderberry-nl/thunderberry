@@ -20,36 +20,36 @@ export default function OpenSourceSection() {
       project: 'Elasticsearch',
       logo: '/logo/elasticsearch.svg',
       contributions: [
-        { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533', title: 'Assert that keystore has been created' },
-        { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413', title: 'Fixed flakey TransportClientIT test' },
-        { url: 'https://github.com/elastic/elasticsearch/pull/67802', prNumber: '67802', title: 'Updated Netty to version 4.1.52.Final' },
-      ],
-    },
-    {
-      project: 'HTTP Libraries',
-      contributions: [
-        { url: 'https://github.com/JetBrains/Exposed/pull/1852', prNumber: '1852', title: 'Add support for multi-table joins' },
-        { url: 'https://github.com/eclipse-ee4j/jersey/pull/4573', prNumber: '4573', title: 'Fix JSON processing with large payload' },
-        { url: 'https://github.com/ktorio/ktor/pull/1852', prNumber: '1852', title: 'Add WebSocket support for Android clients' },
-        { url: 'https://github.com/com-lihaoyi/requests-scala/pull/62', prNumber: '62', title: 'Add support for custom headers' },
-        { url: 'https://github.com/Kong/unirest-java/pull/381', prNumber: '381', title: 'Add multipart form support' },
-        { url: 'https://github.com/Kong/unirest-java/pull/384', prNumber: '384', title: 'Fix connection pooling issue' },
-        { url: 'https://github.com/eclipse-vertx/vert.x/pull/3719', prNumber: '3719', title: 'Fixes NullPointerException in Http2ServerImpl' },
-      ],
-    },
-    {
-      project: 'Http4k',
-      contributions: [
-        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Adds GitHub API support for GraphQL' },
-        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Added unit tests for GitHub GraphQL client' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533', title: 'Enable support for decompression of compressed response within RestHighLevelClient' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413', title: 'Enable decompression of response within LowLevelRestClient' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/67802', prNumber: '67802', title: 'Added support for passing http query parameters' },
       ],
     },
     {
       project: 'Tomcat',
       logo: '/logo/tomcat.png',
       contributions: [
-        { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Upgraded to JUnit Jupiter 5.9.0' },
-        { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Changed from using StringBuilder to StringBuffer' },
+        { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Added option to use custom SSLContext' },
+        { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Simplify usage of custom ssl configuration' },
+      ],
+    },
+    {
+      project: 'Http4k',
+      contributions: [
+        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Bugfix: add nullsafety and fallback for description within the Status' },
+        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Start ApacheAsyncClient by default if not started yet' },
+      ],
+    },
+    {
+      project: 'Other contributions',
+      contributions: [
+        { url: 'https://github.com/eclipse-vertx/vert.x/pull/3719', prNumber: '3719', title: 'Vert.x      Support for generic Key and Trust material' },
+        { url: 'https://github.com/ktorio/ktor/pull/1852', prNumber: '1852', title: 'Ktor - bug-fix: enhanced handling of statusCode for AndroidEngine' },
+        { url: 'https://github.com/Kong/unirest-java/pull/381', prNumber: '381', title: 'Unirest - Support for custom ciphers and protocols for https requests' },
+        { url: 'https://github.com/Kong/unirest-java/pull/384', prNumber: '384', title: 'Unirest - Removed redundant access modifiers, fixed typos and simplified some assertions' },
+        { url: 'https://github.com/JetBrains/Exposed/pull/1852', prNumber: '1852', title: 'JetBrains Exposed - fix: Verbose logging in test module' },
+        { url: 'https://github.com/eclipse-ee4j/jersey/pull/4573', prNumber: '4573', title: 'Jersey - Support for SSL Configuration within JerseyTest' },
+        { url: 'https://github.com/com-lihaoyi/requests-scala/pull/62', prNumber: '62', title: 'Requests-scala - Support for custom SSLContext for ssl configuration' },
       ],
     },
   ]);
@@ -95,6 +95,7 @@ export default function OpenSourceSection() {
                     {contribution.contributions.map((pr, prIndex) => (
                       <TableRow key={prIndex}>
                         <TableCell className="font-medium">#{pr.prNumber}</TableCell>
+                        <TableCell>{pr.title || "Loading..."}</TableCell>
                         <TableCell>{pr.title || "Loading..."}</TableCell>
                         <TableCell>
                           <a 
