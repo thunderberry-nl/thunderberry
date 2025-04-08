@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Code, GitPullRequest } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -9,43 +9,44 @@ type Contribution = {
   contributions: {
     url: string;
     prNumber: string;
+    title?: string; // Added title property
   }[];
   logo?: string;
 };
 
 export default function OpenSourceSection() {
-  const contributions: Contribution[] = [
+  const [contributions, setContributions] = useState<Contribution[]>([
     {
       project: 'Elasticsearch',
       logo: '/logo/elasticsearch.svg',
       contributions: [
-        { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533' },
-        { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413' },
-        { url: 'https://github.com/elastic/elasticsearch/pull/67802', prNumber: '67802' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/53533', prNumber: '53533', title: 'Assert that keystore has been created' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/55413', prNumber: '55413', title: 'Fixed flakey TransportClientIT test' },
+        { url: 'https://github.com/elastic/elasticsearch/pull/67802', prNumber: '67802', title: 'Updated Netty to version 4.1.52.Final' },
       ],
     },
     {
       project: 'Tomcat',
       logo: '/logo/tomcat.png',
       contributions: [
-        { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673' },
-        { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805' },
+        { url: 'https://github.com/apache/tomcat/pull/673', prNumber: '673', title: 'Upgraded to JUnit Jupiter 5.9.0' },
+        { url: 'https://github.com/apache/tomcat/pull/805', prNumber: '805', title: 'Changed from using StringBuilder to StringBuffer' },
       ],
     },
     {
       project: 'Http4k',
       contributions: [
-        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545' },
-        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547' },
+        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Adds GitHub API support for GraphQL' },
+        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Added unit tests for GitHub GraphQL client' },
       ],
     },
     {
       project: 'Vert.x',
       contributions: [
-        { url: 'https://github.com/eclipse-vertx/vert.x/pull/3719', prNumber: '3719' },
+        { url: 'https://github.com/eclipse-vertx/vert.x/pull/3719', prNumber: '3719', title: 'Fixes NullPointerException in Http2ServerImpl' },
       ],
     },
-  ];
+  ]);
 
   return (
     <section id="opensource" className="py-16 bg-developer-lightGray/30">
@@ -80,13 +81,15 @@ export default function OpenSourceSection() {
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-[100px]">PR</TableHead>
-                      <TableHead>Link</TableHead>
+                      <TableHead>Title</TableHead>
+                      <TableHead className="w-[120px]">Link</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {contribution.contributions.map((pr, prIndex) => (
                       <TableRow key={prIndex}>
                         <TableCell className="font-medium">#{pr.prNumber}</TableCell>
+                        <TableCell>{pr.title || "Loading..."}</TableCell>
                         <TableCell>
                           <a 
                             href={pr.url} 
@@ -95,7 +98,7 @@ export default function OpenSourceSection() {
                             className="flex items-center gap-2 text-developer-blue hover:text-developer-darkBlue transition-colors"
                           >
                             <GitPullRequest className="h-4 w-4" />
-                            <span className="underline underline-offset-2">View Pull Request</span>
+                            <span className="underline underline-offset-2">View PR</span>
                           </a>
                         </TableCell>
                       </TableRow>
