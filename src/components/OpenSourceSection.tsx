@@ -38,6 +38,7 @@ export default function OpenSourceSection() {
     },
     {
       project: 'Http4k',
+      logo: '/logo/http4k.jpeg',
       showProjectNameInRows: false,
       contributions: [
         { url: 'https://github.com/http4k/http4k/pull/545', title: 'Bugfix: add nullsafety and fallback for description within the Status' },
