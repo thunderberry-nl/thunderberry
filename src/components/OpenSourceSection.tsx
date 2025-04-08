@@ -26,6 +26,37 @@ export default function OpenSourceSection() {
       ],
     },
     {
+      project: 'Exposed',
+      contributions: [
+        { url: 'https://github.com/JetBrains/Exposed/pull/1852', prNumber: '1852', title: 'Add support for multi-table joins' },
+      ],
+    },
+    {
+      project: 'Http4k',
+      contributions: [
+        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Adds GitHub API support for GraphQL' },
+        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Added unit tests for GitHub GraphQL client' },
+      ],
+    },
+    {
+      project: 'Jersey',
+      contributions: [
+        { url: 'https://github.com/eclipse-ee4j/jersey/pull/4573', prNumber: '4573', title: 'Fix JSON processing with large payload' },
+      ],
+    },
+    {
+      project: 'Ktor',
+      contributions: [
+        { url: 'https://github.com/ktorio/ktor/pull/1852', prNumber: '1852', title: 'Add WebSocket support for Android clients' },
+      ],
+    },
+    {
+      project: 'Requests-Scala',
+      contributions: [
+        { url: 'https://github.com/com-lihaoyi/requests-scala/pull/62', prNumber: '62', title: 'Add support for custom headers' },
+      ],
+    },
+    {
       project: 'Tomcat',
       logo: '/logo/tomcat.png',
       contributions: [
@@ -34,10 +65,10 @@ export default function OpenSourceSection() {
       ],
     },
     {
-      project: 'Http4k',
+      project: 'Unirest-Java',
       contributions: [
-        { url: 'https://github.com/http4k/http4k/pull/545', prNumber: '545', title: 'Adds GitHub API support for GraphQL' },
-        { url: 'https://github.com/http4k/http4k/pull/547', prNumber: '547', title: 'Added unit tests for GitHub GraphQL client' },
+        { url: 'https://github.com/Kong/unirest-java/pull/381', prNumber: '381', title: 'Add multipart form support' },
+        { url: 'https://github.com/Kong/unirest-java/pull/384', prNumber: '384', title: 'Fix connection pooling issue' },
       ],
     },
     {
