@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <Image 
-            src="/lovable-uploads/503f8ec0-0351-4e49-b210-cb86fc475cc3.png" 
+            src="/logo/thunderberry-big.png"
             alt="Thunderberry Logo" 
             width={40} 
             height={40} 
