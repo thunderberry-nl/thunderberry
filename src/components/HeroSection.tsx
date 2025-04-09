@@ -24,9 +24,9 @@ export default function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-developer-blue to-developer-darkBlue rounded-full blur opacity-50"></div>
               <Avatar className="relative w-56 h-56 rounded-full border-4 border-developer-lightBlue shadow-xl bg-white">
-                <AvatarImage 
-                  src="/lovable-uploads/3ac860ac-2a49-4004-a7fa-4a146f115766.png" 
-                  alt="Hakan Altindag" 
+                <AvatarImage
+                  src="/lovable-uploads/3ac860ac-2a49-4004-a7fa-4a146f115766.png"
+                  alt="Hakan Altindag"
                   className="object-cover"
                 />
                 <AvatarFallback className="text-4xl">HA</AvatarFallback>
@@ -44,37 +44,37 @@ export default function HeroSection() {
               Hi, I'm <span className="text-developer-blue">Hakan Altindag</span>
             </h1>
             <p className="text-lg md:text-xl text-developer-gray/80 mb-8 max-w-xl">
-              A passionate Java developer specialized in building high-quality, secure, and efficient applications. 
+              A passionate Java developer specialized in building high-quality, secure, and efficient applications.
               Creating open-source solutions that help developers worldwide.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                className="bg-developer-blue hover:bg-developer-darkBlue text-white cursor-pointer"
+              <Button
+                size="lg"
+                className="bg-developer-blue hover:bg-developer-darkBlue text-white cursor-pointer animate-bounce"
                 onClick={() => handleScroll('projects')}
               >
                 View My Projects
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-developer-blue text-developer-blue hover:bg-developer-blue/10 cursor-pointer"
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-developer-blue text-developer-blue hover:bg-developer-blue/10 cursor-pointer animate-bounce"
                 onClick={() => handleScroll('contact')}
               >
                 Contact Me
               </Button>
             </div>
           </div>
-          
+
           {/* Only show avatar on desktop */}
           {!isMobile && (
             <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center animate-fade-in">
               <div className="relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-developer-blue to-developer-darkBlue rounded-full blur opacity-50"></div>
                 <Avatar className="relative w-64 h-64 rounded-full border-4 border-developer-lightBlue shadow-xl bg-white">
-                  <AvatarImage 
-                    src="/lovable-uploads/3ac860ac-2a49-4004-a7fa-4a146f115766.png" 
-                    alt="Hakan Altindag" 
+                  <AvatarImage
+                    src="/lovable-uploads/3ac860ac-2a49-4004-a7fa-4a146f115766.png"
+                    alt="Hakan Altindag"
                     className="object-cover"
                   />
                   <AvatarFallback className="text-4xl">HA</AvatarFallback>
