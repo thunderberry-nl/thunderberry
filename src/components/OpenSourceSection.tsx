@@ -46,7 +46,7 @@ export default function OpenSourceSection() {
       ],
     },
     {
-      project: 'HTTP Libraries',
+      project: 'Other contributions',
       showProjectNameInRows: true,
       contributions: [
         { url: 'https://github.com/Kong/unirest-java/pull/381', title: 'Support for custom ciphers and protocols for https requests', projectName: 'Unirest-Java' },
