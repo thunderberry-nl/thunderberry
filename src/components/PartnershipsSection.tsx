@@ -7,51 +7,51 @@ export default function PartnershipsSection() {
   const [loadedCount, setLoadedCount] = useState(0);
   
   const partners = [
-    { 
+    {
+      name: 'IKEA',
+      logo: 'ikea.png',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
+      name: 'ING',
+      logo: 'ing.svg',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
+      name: 'KLM Royal Dutch Airlines',
+      logo: 'klm.png',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
+      name: 'Attraqt',
+      logo: 'attraqt.png',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
+      name: 'Nederlandse Spoorwegen',
+      logo: 'ns.png',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
       name: 'ABN AMRO', 
       logo: 'abn-amro.svg',
       backgroundColor: '#fff',
       padding: '12px'
     },
-    { 
-      name: 'ING', 
-      logo: 'ing.svg',
-      backgroundColor: '#fff',
-      padding: '12px'
-    },
-    { 
-      name: 'Nederlandse Spoorwegen', 
-      logo: 'ns.png',
-      backgroundColor: '#fff',
-      padding: '12px' 
-    },
-    { 
-      name: 'KLM Royal Dutch Airlines', 
-      logo: 'klm.png',
-      backgroundColor: '#fff',
-      padding: '12px'
-    },
-    { 
+    {
       name: 'Kamer van Koophandel', 
       logo: 'kvk.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
-    { 
+    {
       name: 'IVO Rechtspraak', 
       logo: 'rechtspraak.png',
-      backgroundColor: '#fff',
-      padding: '12px'
-    },
-    { 
-      name: 'Attraqt', 
-      logo: 'attraqt.png',
-      backgroundColor: '#fff',
-      padding: '12px'
-    },
-    { 
-      name: 'IKEA', 
-      logo: 'ikea.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
