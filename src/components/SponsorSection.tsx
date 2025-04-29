@@ -90,7 +90,7 @@ export default function SponsorSection() {
                         className="text-developer-blue hover:text-developer-darkBlue font-medium flex items-center justify-center gap-2"
                       >
                         <Github className="h-5 w-5" />
-                        <span>github.com/sponsors/Hakky54</span>
+                        <span>Sponsor Hakan through GitHub</span>
                       </a>
                     </div>
                   </div>
@@ -113,7 +113,7 @@ export default function SponsorSection() {
                           rel="noopener noreferrer"
                           className="text-[#3385FF] hover:text-[#1D70B8] font-medium text-sm"
                         >
-                          opencollective.com/hakky54
+                          Sponsor Hakan through Open Collective
                         </a>
                       </div>
                     </div>
@@ -133,7 +133,7 @@ export default function SponsorSection() {
                           rel="noopener noreferrer" 
                           className="text-[#FF5E5B] hover:text-[#E04C49] font-medium text-sm"
                         >
-                          ko-fi.com/hakky54
+                          Sponsor Hakan through Ko-fi
                         </a>
                       </div>
                     </div>
