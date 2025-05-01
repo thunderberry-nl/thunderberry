@@ -19,9 +19,6 @@ export default function Footer() {
           </div>
           
           <div className="text-center mb-4 md:mb-0">
-            <p className="flex items-center justify-center text-gray-300">
-              Made with <Heart className="mx-1 text-red-400" size={16} /> and <Code className="mx-1" size={16} />
-            </p>
             <p className="text-gray-400 text-sm mt-1">© {new Date().getFullYear()} Hakan Altindag. All rights reserved.</p>
           </div>
           
