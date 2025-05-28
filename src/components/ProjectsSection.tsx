@@ -32,7 +32,7 @@ export default function ProjectsSection() {
         // Sort by stars but ensure console-captor is included
         const starsSorted = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         
-        const topProjects = starsSorted.slice(0, 5);
+        const topProjects = starsSorted.slice(0, 6);
         setProjects(topProjects);
         setLoading(false);
       } catch (err) {
