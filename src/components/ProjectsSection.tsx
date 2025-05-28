@@ -40,7 +40,7 @@ export default function ProjectsSection() {
         setError('Failed to load projects. Using fallback data.');
         setLoading(false);
         
-        // Fallback data with added console-captor if not already present
+        // Updated fallback data with correct watchers_count values
         setProjects([
           {
             name: "sslcontext-kickstart",
@@ -53,16 +53,6 @@ export default function ProjectsSection() {
             topics: ["security", "tls", "ssl", "java", "certificate"]
           },
           {
-            name: "console-captor",
-            description: "A Java library to capture console output for testing and logging purposes",
-            html_url: "https://github.com/Hakky54/console-captor",
-            stargazers_count: 35,
-            forks_count: 10,
-            watchers_count: 35,
-            language: "Java",
-            topics: ["testing", "logging", "java", "console"]
-          },
-          {
             name: "mutual-tls-ssl",
             description: "Demonstrates different ways of implementing Mutual TLS/SSL authentication in various protocols and technologies",
             html_url: "https://github.com/Hakky54/mutual-tls-ssl",
@@ -73,16 +63,6 @@ export default function ProjectsSection() {
             topics: ["security", "tls", "ssl", "mutual-authentication", "client-certificate"]
           },
           {
-            name: "java-tutorial",
-            description: "A basic tutorial about Java, Spring, Hibernate, Maven, Microservices, Apache CXF, OpenShift",
-            html_url: "https://github.com/Hakky54/java-tutorial",
-            stargazers_count: 17,
-            forks_count: 11,
-            watchers_count: 17,
-            language: "Java",
-            topics: ["java", "tutorial", "learning"]
-          },
-          {
             name: "log-captor",
             description: "A library which will allow you to easily capture the logs for logging frameworks in the verification phase of your unit tests",
             html_url: "https://github.com/Hakky54/log-captor",
@@ -91,6 +71,26 @@ export default function ProjectsSection() {
             watchers_count: 45,
             language: "Java",
             topics: ["logging", "testing", "unit-tests", "slf4j"]
+          },
+          {
+            name: "console-captor",
+            description: "A Java library to capture console output for testing and logging purposes",
+            html_url: "https://github.com/Hakky54/console-captor",
+            stargazers_count: 35,
+            forks_count: 10,
+            watchers_count: 35,
+            language: "Java",
+            topics: ["testing", "logging", "java", "console"]
+          },
+          {
+            name: "java-tutorial",
+            description: "A basic tutorial about Java, Spring, Hibernate, Maven, Microservices, Apache CXF, OpenShift",
+            html_url: "https://github.com/Hakky54/java-tutorial",
+            stargazers_count: 17,
+            forks_count: 11,
+            watchers_count: 17,
+            language: "Java",
+            topics: ["java", "tutorial", "learning"]
           }
         ]);
       }
