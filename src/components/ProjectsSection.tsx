@@ -11,7 +11,6 @@ interface Repository {
   html_url: string;
   stargazers_count: number;
   forks_count: number;
-  watchers: number;
   language: string;
   topics: string[];
 }
@@ -31,7 +30,7 @@ export default function ProjectsSection() {
         const data = await response.json();
         
         // Sort by stars but ensure console-captor is included
-        const starsSorted = data.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
+        const starsSorted = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         
         const topProjects = starsSorted.slice(0, 5);
         setProjects(topProjects);
@@ -48,7 +47,6 @@ export default function ProjectsSection() {
             html_url: "https://github.com/Hakky54/sslcontext-kickstart",
             stargazers_count: 580,
             forks_count: 58,
-            watchers: 18,
             language: "Java",
             topics: ["security", "tls", "ssl", "java", "certificate"]
           },
@@ -58,7 +56,6 @@ export default function ProjectsSection() {
             html_url: "https://github.com/Hakky54/mutual-tls-ssl",
             stargazers_count: 378,
             forks_count: 129,
-            watchers: 18,
             language: "Java",
             topics: ["security", "tls", "ssl", "mutual-authentication", "client-certificate"]
           },
@@ -68,7 +65,6 @@ export default function ProjectsSection() {
             html_url: "https://github.com/Hakky54/log-captor",
             stargazers_count: 45,
             forks_count: 7,
-            watchers: 8,
             language: "Java",
             topics: ["logging", "testing", "unit-tests", "slf4j"]
           },
@@ -78,7 +74,6 @@ export default function ProjectsSection() {
             html_url: "https://github.com/Hakky54/console-captor",
             stargazers_count: 35,
             forks_count: 10,
-            watchers: 5,
             language: "Java",
             topics: ["testing", "logging", "java", "console"]
           },
@@ -88,7 +83,6 @@ export default function ProjectsSection() {
             html_url: "https://github.com/Hakky54/java-tutorial",
             stargazers_count: 17,
             forks_count: 11,
-            watchers: 3,
             language: "Java",
             topics: ["java", "tutorial", "learning"]
           }
@@ -151,10 +145,6 @@ export default function ProjectsSection() {
                   <div className="flex items-center">
                     <GitFork className="h-4 w-4 mr-1" />
                     <span className="text-sm">{project.forks_count}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Eye className="h-4 w-4 mr-1" />
-                    <span className="text-sm">{project.watchers}</span>
                   </div>
                 </div>
                 <Button variant="ghost" size="sm" className="text-developer-blue hover:text-developer-darkBlue hover:bg-developer-lightBlue/20" asChild>
