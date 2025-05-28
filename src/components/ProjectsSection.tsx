@@ -30,19 +30,10 @@ export default function ProjectsSection() {
         }
         const data: Repository[] = await response.json();
         
-        // Filter to ensure console-captor is included
-        const consoleCaptorProject = data.find(repo => repo.name === 'console-captor');
-        
         // Sort by stars but ensure console-captor is included
         const starsSorted = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         
-        let topProjects = starsSorted.slice(0, 5);
-        
-        // If console-captor is not in top 5, add it and remove the 5th entry
-        if (consoleCaptorProject && !topProjects.some(p => p.name === 'console-captor')) {
-          topProjects = [...topProjects.slice(0, 4), consoleCaptorProject];
-        }
-        
+        const topProjects = starsSorted.slice(0, 5);
         setProjects(topProjects);
         setLoading(false);
       } catch (err) {
