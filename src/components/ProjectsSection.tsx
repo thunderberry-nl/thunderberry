@@ -13,6 +13,8 @@ interface Repository {
   forks_count: number;
   language: string;
   topics: string[];
+  type?: 'app' | 'repo';
+  logo?: string;
 }
 
 export default function ProjectsSection() {
@@ -41,6 +43,17 @@ export default function ProjectsSection() {
         
         // Updated fallback data with correct watchers values
         setProjects([
+          {
+            name: "Lidwoord",
+            description: "Android app that helps you find the correct Dutch article for nouns and more",
+            html_url: "https://play.google.com/store/apps/details?id=nl.altindag.welklidwoord&hl=en",
+            stargazers_count: 1000,
+            forks_count: 0,
+            language: "Android",
+            topics: ["android", "education", "dutch"],
+            type: 'app' as const,
+            logo: "/logo/google-play.png"
+          },
           {
             name: "sslcontext-kickstart",
             description: "SSL made easy! A library to setup a SSLContext and other TLS related settings within just a few lines of code!",
@@ -111,8 +124,13 @@ export default function ProjectsSection() {
             <Card key={project.name} className="project-card h-full flex flex-col animate-fade-up" style={{ animationDelay: `${index * 100}ms` }}>
               <CardHeader className="pb-2">
                 <CardTitle className="flex justify-between items-start">
-                  <span className="text-xl font-bold text-developer-darkBlue truncate mr-2">{project.name}</span>
-                  <a href={project.html_url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} on GitHub`}>
+                  <div className="flex items-center gap-2 flex-1 min-w-0">
+                    {project.logo && (
+                      <img src={project.logo} alt={`${project.name} logo`} className="h-6 w-6 object-contain flex-shrink-0" />
+                    )}
+                    <span className="text-xl font-bold text-developer-darkBlue truncate">{project.name}</span>
+                  </div>
+                  <a href={project.html_url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name}`} className="flex-shrink-0">
                     <ArrowUpRight className="h-5 w-5 text-developer-blue hover:text-developer-darkBlue transition-colors" />
                   </a>
                 </CardTitle>
@@ -131,6 +149,11 @@ export default function ProjectsSection() {
                   {project.language && (
                     <Badge variant="outline" className="text-xs border-developer-blue/20 text-developer-blue">
                       {project.language}
+                    </Badge>
+                  )}
+                  {project.type === 'app' && (
+                    <Badge variant="secondary" className="text-xs bg-green-100 text-green-800 hover:bg-green-200">
+                      App
                     </Badge>
                   )}
                 </div>
