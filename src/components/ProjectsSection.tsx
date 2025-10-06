@@ -15,6 +15,7 @@ interface Repository {
   topics: string[];
   type?: 'app' | 'repo';
   logo?: string;
+  downloads?: string;
 }
 
 export default function ProjectsSection() {
@@ -46,7 +47,8 @@ export default function ProjectsSection() {
           language: "Java",
           topics: ["android", "education", "Dutch"],
           type: 'app' as const,
-          logo: "/logo/google-play.png"
+          logo: "/logo/google-play.png",
+          downloads: "10+"
         })
         topProjects.push({
           name: "OpenSSL CheatSheet",
@@ -143,17 +145,24 @@ export default function ProjectsSection() {
               <CardFooter className="border-t pt-4 flex justify-between">
                 <div className="flex items-center space-x-4 text-developer-gray/70">
                   {
-                    project.stargazers_count > 0 ?
+                    project.stargazers_count > 0 &&
                       <div className="flex items-center">
                         <Star className="h-4 w-4 mr-1 text-yellow-500"/>
                         <span className="text-sm">{project.stargazers_count}</span>
-                      </div> : <div></div>}
+                      </div>
+                  }
                   {
-                    project.forks_count > 0 ?
+                    project.forks_count > 0 &&
                         <div className="flex items-center">
                           <GitFork className="h-4 w-4 mr-1"/>
                           <span className="text-sm">{project.forks_count}</span>
-                        </div> : <div></div>
+                        </div>
+                  }
+                  {
+                    project.downloads != null &&
+                      <div className="flex items-center">
+                        <span className="text-sm">{project.downloads} Downloads</span>
+                      </div>
                   }
                 </div>
                 <Button variant="ghost" size="sm" className="text-developer-blue hover:text-developer-darkBlue hover:bg-developer-lightBlue/20" asChild>
