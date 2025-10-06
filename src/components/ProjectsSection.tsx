@@ -35,6 +35,18 @@ export default function ProjectsSection() {
         const starsSorted = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         
         const topProjects = starsSorted.slice(0, 6);
+        topProjects.push({
+          name: "Lidwoord",
+          description: "Android app that helps you find the correct Dutch article for nouns and more",
+          html_url: "https://play.google.com/store/apps/details?id=nl.altindag.welklidwoord&hl=en",
+          stargazers_count: 0,
+          forks_count: 0,
+          language: "Android",
+          topics: ["android", "education", "dutch"],
+          type: 'app' as const,
+          logo: "/logo/google-play.png"
+        })
+
         setProjects(topProjects);
         setLoading(false);
       } catch (err) {
