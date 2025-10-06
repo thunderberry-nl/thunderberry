@@ -23,6 +23,48 @@ export default function ProjectsSection() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const additionalProjects = [
+    {
+      name: "Lidwoord",
+      description: "Android app that helps you find the correct Dutch article for nouns and more",
+      html_url: "https://play.google.com/store/apps/details?id=nl.altindag.welklidwoord&hl=en",
+      stargazers_count: null,
+      forks_count: null,
+      language: "Java",
+      topics: ["android", "education", "Dutch"],
+      type: 'app' as const,
+      logo: "/logo/google-play.png",
+      downloads: "10+"
+    },
+    {
+      name: "OpenSSL CheatSheet",
+      description: "OpenSSL commands and tips for managing SSL/TLS certificates and keys",
+      html_url: "https://gist.github.com/Hakky54/b30418b25215ad7d18f978bc0b448d81",
+      stargazers_count: 324,
+      forks_count: 103,
+      language: "openssl",
+      topics: ["CLI", "education", "keystore", "truststore", "certificate"]
+    },
+    {
+      name: "Keytool CheatSheet",
+      description: "Keytool commands and tips for managing Java keystores and certificates",
+      html_url: "https://gist.github.com/Hakky54/7a2f0fcbcf5fdf4674d48f1a0b31c862",
+      stargazers_count: 95,
+      forks_count: 33,
+      language: "keytool",
+      topics: ["CLI", "education", "keystore", "truststore", "certificate"]
+    },
+    {
+      name: "Http Client SSL/TLS Configuration",
+      description: "Cheat Sheet - Http Client SSL TLS Configuration for Java, Kotlin and Scala with example http requests",
+      html_url: "https://gist.github.com/Hakky54/ee12534594a3e35f48e18a16e42c7f40",
+      stargazers_count: 37,
+      forks_count: 1,
+      language: "java",
+      topics: ["Kotlin", "Scala", "SSL", "TLS", "Security"]
+    }
+  ];
+
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -38,45 +80,7 @@ export default function ProjectsSection() {
         const topProjects = starsSorted.slice(0, 6);
 
         // Some additional projects that are not on GitHub
-        topProjects.push({
-          name: "Lidwoord",
-          description: "Android app that helps you find the correct Dutch article for nouns and more",
-          html_url: "https://play.google.com/store/apps/details?id=nl.altindag.welklidwoord&hl=en",
-          stargazers_count: null,
-          forks_count: null,
-          language: "Java",
-          topics: ["android", "education", "Dutch"],
-          type: 'app' as const,
-          logo: "/logo/google-play.png",
-          downloads: "10+"
-        })
-        topProjects.push({
-          name: "OpenSSL CheatSheet",
-          description: "OpenSSL commands and tips for managing SSL/TLS certificates and keys",
-          html_url: "https://gist.github.com/Hakky54/b30418b25215ad7d18f978bc0b448d81",
-          stargazers_count: 324,
-          forks_count: 103,
-          language: "openssl",
-          topics: ["CLI", "education", "keystore", "truststore", "certificate"]
-        })
-        topProjects.push({
-          name: "Keytool CheatSheet",
-          description: "Keytool commands and tips for managing Java keystores and certificates",
-          html_url: "https://gist.github.com/Hakky54/7a2f0fcbcf5fdf4674d48f1a0b31c862",
-          stargazers_count: 95,
-          forks_count: 33,
-          language: "keytool",
-          topics: ["CLI", "education", "keystore", "truststore", "certificate"]
-        })
-        topProjects.push({
-          name: "Http Client SSL/TLS Configuration",
-          description: "Cheat Sheet - Http Client SSL TLS Configuration for Java, Kotlin and Scala with example http requests",
-          html_url: "https://gist.github.com/Hakky54/ee12534594a3e35f48e18a16e42c7f40",
-          stargazers_count: 37,
-          forks_count: 1,
-          language: "java",
-          topics: ["Kotlin", "Scala", "SSL", "TLS", "Security"]
-        })
+        additionalProjects.forEach(value => topProjects.push(value))
 
         setProjects(topProjects);
         setLoading(false);
