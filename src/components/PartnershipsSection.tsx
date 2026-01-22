@@ -38,6 +38,12 @@ export default function PartnershipsSection() {
       padding: '12px'
     },
     {
+      name: 'MY-LEX',
+      logo: 'mylex.png',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
       name: 'Nederlandse Spoorwegen',
       logo: 'ns.png',
       backgroundColor: '#fff',
