@@ -9,7 +9,7 @@ export default function PartnershipsSection() {
   const partners = [
     {
       name: 'Eneco',
-      logo: 'eneco.svg',
+      logo: 'eneco.png',
       backgroundColor: '#fff',
       padding: '12px'
     },
