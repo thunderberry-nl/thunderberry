@@ -8,6 +8,12 @@ export default function PartnershipsSection() {
   
   const partners = [
     {
+      name: 'Eneco',
+      logo: 'eneco.svg',
+      backgroundColor: '#fff',
+      padding: '12px'
+    },
+    {
       name: 'IKEA',
       logo: 'ikea.png',
       backgroundColor: '#fff',
