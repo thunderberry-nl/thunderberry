@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import { Film, Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import videoTapesImage from '@/assets/video-digitalization.jpg';
@@ -10,6 +11,32 @@ const formats = [
 ];
 
 const VideoDigitalizationSection = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Video Bandjes Digitaliseren',
+      description: 'Video bandjes digitaliseren in Hilversum. Wij digitaliseren uw VHS, Hi8 en miniDV cassettes naar hoogwaardige digitale bestanden.',
+      provider: {
+        '@type': 'Person',
+        name: 'Hakan Altindag',
+        address: { '@type': 'PostalAddress', addressLocality: 'Hilversum', addressCountry: 'NL' },
+      },
+      areaServed: { '@type': 'City', name: 'Hilversum' },
+      offers: {
+        '@type': 'Offer',
+        price: '15',
+        priceCurrency: 'EUR',
+        description: 'Per tape – VHS, Hi8, miniDV',
+      },
+      keywords: 'video bandjes digitaliseren, video bandjes digitaliseren Hilversum, miniDV, Hi8, VHS',
+    });
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, []);
+
   return (
     <section id="video-digitalization" className="bg-muted">
       <div className="max-w-6xl mx-auto">
