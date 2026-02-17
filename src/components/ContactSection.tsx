@@ -139,7 +139,7 @@ export default function ContactSection() {
               <Label htmlFor="message" className="text-developer-darkBlue">Message *</Label>
               <Textarea
                 id="message"
-                placeholder="Tell me about your project or idea..."
+                placeholder=""
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 maxLength={1000}
