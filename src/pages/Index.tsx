@@ -7,6 +7,7 @@ import SkillsOverviewSection from '@/components/SkillsOverviewSection';
 import OpenSourceSection from '@/components/OpenSourceSection';
 import SponsorSection from '@/components/SponsorSection';
 import PartnershipsSection from '@/components/PartnershipsSection';
+import VideoDigitalizationSection from '@/components/VideoDigitalizationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -21,6 +22,7 @@ const Index = () => {
       <OpenSourceSection />
       <SponsorSection />
       <PartnershipsSection />
+      <VideoDigitalizationSection />
       <ContactSection />
       <Footer />
     </div>
