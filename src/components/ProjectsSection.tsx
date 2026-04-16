@@ -34,7 +34,7 @@ export default function ProjectsSection() {
       topics: ["android", "education", "Dutch"],
       type: 'app' as const,
       logo: "/logo/google-play.png",
-      downloads: "10+"
+      downloads: "100+"
     },
     {
       name: "OpenSSL CheatSheet",
