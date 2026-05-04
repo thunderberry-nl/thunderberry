@@ -16,7 +16,7 @@ type Contribution = {
 };
 
 export default function OpenSourceSection() {
-  const [contributions, setContributions] = useState<Contribution[]>([
+  const [contributions] = useState<Contribution[]>([
     {
       project: 'Elasticsearch',
       logo: '/logo/elasticsearch.svg',
