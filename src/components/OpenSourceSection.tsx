@@ -63,7 +63,7 @@ export default function OpenSourceSection() {
         { url: 'https://github.com/SonarSource/sonarlint-core/pull/633', title: 'Bumped sslcontext kickstart and switched to TrustManagerParameters for predicate', projectName: 'Sonarlint-Core' },
         { url: 'https://github.com/SonarOpenCommunity/sonar-cxx/pull/3044', title: 'bugfix - correctly resolve truststore path on filesystem', projectName: 'SonarQube C++' },
         { url: 'https://github.com/ktorio/ktor/pull/1852', title: 'Bug-fix: enhanced handling of statusCode for AndroidEngine', projectName: 'Ktor' },
-        { url: 'https://github.com/JetBrains/Exposed/pull/1852', title: 'Fix: Verbose logging in test module', projectName: 'Jetbrains - Exposed' },
+        { url: 'https://github.com/JetBrains/Exposed/pull/1852', title: 'Fix: Verbose logging in test module', projectName: 'Jetbrains Exposed' },
         { url: 'https://github.com/eclipse-ee4j/jersey/pull/4573', title: 'Support for SSL Configuration within JerseyTest', projectName: 'Jersey' },
         { url: 'https://github.com/Kong/unirest-java/pull/381', title: 'Support for custom ciphers and protocols for https requests', projectName: 'Unirest-Java' },
         { url: 'https://github.com/Kong/unirest-java/pull/384', title: 'Removed redundant access modifiers, fixed typos and simplified some assertions', projectName: 'Unirest-Java' },
